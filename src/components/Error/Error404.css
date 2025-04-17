@@ -1,0 +1,14 @@
+.errorStyle{
+    font-size: 40px;
+    color:red;
+}
+
+.errorButton{
+    background-color: black;
+    font-size: 20px;
+    color:white;
+    border: 10px;
+    width: 100px;
+    height: 25px;
+    border-radius: 15px;
+}

@@ -1,0 +1,38 @@
+.detailItem {
+    display: grid;
+    grid-template-columns: 60% 40%; 
+    grid-template-areas: 
+      "imagen datos"
+      "imagen info"
+      "imagen boton";
+    gap: 20px;
+    padding: 20px;
+    max-width: auto;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
+  .detailItem img {
+    grid-area: imagen;
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain; 
+    border-radius: 8px;
+  }
+  
+
+  .infodetailItem {
+    grid-area: info;
+    margin: auto;
+    padding: auto;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  
+
+  .detailItem > :last-child {
+    grid-area: boton;
+    align-self: end; 
+
+  } 

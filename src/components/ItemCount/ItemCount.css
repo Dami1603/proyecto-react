@@ -1,0 +1,51 @@
+.countCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.countCart button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countCart button:hover {
+    background-color: white;
+    color:black;
+    border: 1px solid black;
+
+}
+
+.countCart p {
+    font-size: 24px;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+.confirmCart button {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+}
+
+.confirmCart button:hover {
+    background-color: white;
+    color:black;
+    border: 1px solid black;
+}

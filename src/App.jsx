@@ -4,13 +4,27 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import Error from './components/Error/Error404'
+
+
 
 function App() {
 
   return (
     <>
-      <NavBar/>
-      <ItemListContainer mensaje={"Bienvenido! este es un proyecto de CoderHouse, realizado por Damian Santiago Dandrade"}/>
+
+    <BrowserRouter>
+    <NavBar/>
+      <Routes>
+        <Route path='/' element={<ItemListContainer></ItemListContainer>}></Route>
+        <Route path='/:idCategoria' element={<ItemListContainer></ItemListContainer>}></Route>
+        <Route path='/item/:idItem' element={<ItemDetailContainer></ItemDetailContainer>}></Route>
+        <Route path='*' element={<Error></Error>}></Route>
+      </Routes>
+      
+    </BrowserRouter>
     </>
   )
 }

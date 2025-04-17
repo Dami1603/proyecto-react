@@ -1,7 +1,7 @@
-.error{
-    display: inline-flex;
+
+.tablaProductos{
+    display: flex;
     align-items: center;
-    color:Red;
-    border: 1px solid;
-    width: 200px;
+    height: 100%;
+    width: 100%;
 }

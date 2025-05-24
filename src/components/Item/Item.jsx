@@ -9,7 +9,7 @@ const Item = ({id,nombre,precio,img}) => {
   return (
     <div className='cardProductos'>
         <img src={img} alt={nombre}></img>
-        <h3>{nombre} (ID:{id})</h3>
+        <h3>{nombre}</h3>
         <p>${precio}</p>
         <Link to={`/item/${id}`}>
         <button>Ver detalles</button>

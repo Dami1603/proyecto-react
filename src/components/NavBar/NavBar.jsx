@@ -12,7 +12,7 @@ function NavBar() {
       <Link to="/">
       <img className="imglogo" src={logo} alt="Damistcglogo" />
       </Link>
-        <navc className="navbar">
+        <nav className="navbar">
             <ul>
                 <li>
                 <NavLink to={"/singles"}> Singles </NavLink>
@@ -24,7 +24,7 @@ function NavBar() {
                 <NavLink to={"/"}> Todos </NavLink>
                 </li>                                      
             </ul>
-        </navc>
+        </nav>
         <CartWidget/>
     </header>
   )

@@ -1,10 +1,5 @@
 .detailItem {
-    display: grid;
-    grid-template-columns: 60% 40%; 
-    grid-template-areas: 
-      "imagen datos"
-      "imagen info"
-      "imagen boton";
+    display: flex;
     gap: 20px;
     padding: 20px;
     max-width: auto;
@@ -13,7 +8,6 @@
   }
   
   .detailItem img {
-    grid-area: imagen;
     width: 100%;
     max-height: 500px;
     object-fit: contain; 
@@ -22,17 +16,37 @@
   
 
   .infodetailItem {
-    grid-area: info;
     margin: auto;
     padding: auto;
     font-size: 1rem;
     color: black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
   
   
 
   .detailItem > :last-child {
-    grid-area: boton;
     align-self: end; 
-
   } 
+
+ .detailCartButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ } 
+
+  .detailCartButton2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 150px;
+    height: 75px;
+    text-decoration: none;
+ } 

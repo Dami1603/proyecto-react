@@ -1,0 +1,60 @@
+.carrito{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    margin: auto;
+}
+
+.suma{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    padding: 32px;
+    color:white
+
+}
+
+.suma button{
+    background-color: #3B82F6;
+    color:white;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 19.2px;
+    padding: 10px 20px;
+    margin: auto;
+}
+
+.suma button:hover {
+    background-color: #2e7bf8;
+    color:white;
+    border: 1px solid white;
+
+}
+
+.botonFinalizar{
+    text-decoration: none;
+    background-color: #4CAF50;
+    color:white;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 19.2px;
+    padding: 10px 20px;
+}
+
+.botonFinalizar:hover {
+    background-color: #45a049;
+    color:white;
+    border: 1px solid white;
+
+}
+
+.noProductos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

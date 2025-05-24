@@ -1,4 +1,4 @@
-.cardProductos{
+.cardCart{
     background-color: black;
     border-radius: 10px;
     width: 320px;
@@ -10,7 +10,7 @@
     color:white
 }
 
-.cardProductos img{
+.cardCart img{
     height: 250px;
     width: 250px;
     object-fit: contain;
@@ -19,17 +19,17 @@
 
 }
 
-.cardProductos button{
-    background-color: #4CAF50;
+.cardCart button{
+    background-color: #EF4444;
     color:white;
     border-radius: 10px;
-    border: 1px solid white;
+    border: 1px solid black;
     font-size: 19.2px;
     padding: 10px 20px;
 }
 
-.cardProductos button:hover {
-    background-color: #45a049;
+.cardCart button:hover {
+    background-color: #EF4444;
     color:white;
     border: 1px solid white;
 

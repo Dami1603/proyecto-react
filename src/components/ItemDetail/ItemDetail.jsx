@@ -1,31 +1,38 @@
 import React, { useState } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
+import { useContext } from 'react'
+import { toast } from 'react-toastify'
 
-const ItemDetail = ({id,nombre,precio,img,stock}) => {
+const ItemDetail = ({id,nombre,precio,img,stock,descripcion}) => {
 
     const [agregarCantidad,setAgregarCantidad] = useState(0)
 
-    //creamos una funcion manejadora de la cantidad:
+    const {agregarAlCart} = useContext(CartContext)
 
     const manejadorCantidad = (cantidad) =>{
-        setAgregarCantidad(cantidad)
-        console.log("Productos agregados:" + cantidad)
+      setAgregarCantidad(cantidad)
+      console.log("Productos agregados:" + cantidad)
+      const item = {id,nombre,precio,img}
+      agregarAlCart(item, cantidad)
+      toast.success("Su compra fue enviada al carrito",{autoClose:1000,theme:"dark",position:"top-right"})
+
     }
+
+
 
 
   return (
     <div className='detailItem'>
         <div className='infodetailItem'>
-        <h1>{nombre} id:{id}</h1>
+        <h1>{nombre}</h1>
         <h2>${precio}</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, quos alias officiis optio architecto a doloremque dicta iure quidem quam placeat omnis nostrum unde? Porro modi praesentium facere ipsa non!</p>
-        </div>
+        <p>{descripcion}</p>
         <img src={img} alt={nombre} />
-        <div className='detailCartButton'>
         {
-            ///Se emplea un montaje y desmotaje del contador
-            agregarCantidad > 0 ? (<Link to="/cart"> Terminar Compra</Link>) : (<ItemCount inicial={1} stock={stock} funcionagregar={manejadorCantidad}></ItemCount>)
+            agregarCantidad > 0 ? (<div className='detailCartButton2'><Link to="/cart"> Terminar Compra</Link></div>) : (<ItemCount inicial={1} stock={stock} funcionagregar={manejadorCantidad}></ItemCount>)
         }
         </div>
     </div>
